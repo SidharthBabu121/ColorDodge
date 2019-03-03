@@ -75,7 +75,7 @@ public class ColorShoot extends Canvas implements Runnable{
 			frames++;
 			if(System.currentTimeMillis() - timer > 1000) {
 				timer += 1000;
-				//System.out.println("FPS: " + frames + "\nSeconds: " + sec);
+				//System.out.println("FPS: " + frames + "\nSeconds: " + sec); //DISABLED: Prints Frames Per Second
 				System.out.println("Seconds: " + sec);
 				sec++;
 				frames = 0;
