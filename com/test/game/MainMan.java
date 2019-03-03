@@ -30,11 +30,35 @@ public class MainMan extends GameSprite {
 	private void collision() {
 		for (int i = 0; i < renderer.sprite.size(); i++) {
 			GameSprite tempSprite = renderer.sprite.get(i);
-			if (tempSprite.summonDiff() == Diff.RedEnemy /*TODO: color conditions? also basically tempSprite is RedEnemy here */) {
+			if (tempSprite.summonDiff() == Diff.RedEnemy) {
 				if (getBounds().intersects(tempSprite.getBounds())) {
 					//collision code here
 					healthBarPlus.HEALTH -= 1;
 				}
+			}
+			if (tempSprite.summonDiff() == Diff.BlueEnemy) {
+				if (getBounds().intersects(tempSprite.getBounds())) {
+					//collision code here
+					healthBarPlus.HEALTH -= 1;
+				}	
+			}
+			if (tempSprite.summonDiff() == Diff.GreenEnemy) {
+				if (getBounds().intersects(tempSprite.getBounds())) {
+					//collision code here
+					healthBarPlus.HEALTH -= 1;
+				}	
+			}
+			if (tempSprite.summonDiff() == Diff.YellowEnemy) {
+				if (getBounds().intersects(tempSprite.getBounds())) {
+					//collision code here
+					healthBarPlus.HEALTH -= 1;
+				}	
+			}
+			if (tempSprite.summonDiff() == Diff.PurpleEnemy) {
+				if (getBounds().intersects(tempSprite.getBounds())) {
+					//collision code here
+					healthBarPlus.HEALTH -= 1;
+				}	
 			}
 		}
 	}
