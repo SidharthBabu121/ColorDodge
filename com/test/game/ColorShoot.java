@@ -79,7 +79,13 @@ public class ColorShoot extends Canvas implements Runnable{
 				System.out.println("Seconds: " + sec);
 				sec++;
 				frames = 0;
-				renderer.addSprite(new RedEnemy(rNum.nextInt(WIDTH), rNum.nextInt(HEIGHT), Diff.RedEnemy, renderer));
+				int eType = rNum.nextInt(5);
+				//System.out.print(eType); //DISABLED:  Prints enemy type 
+				if (eType == 0) renderer.addSprite(new RedEnemy(rNum.nextInt(WIDTH), rNum.nextInt(HEIGHT), Diff.RedEnemy, renderer));
+				if (eType == 1) renderer.addSprite(new BlueEnemy(rNum.nextInt(WIDTH), rNum.nextInt(HEIGHT), Diff.BlueEnemy, renderer));
+				if (eType == 2) renderer.addSprite(new GreenEnemy(rNum.nextInt(WIDTH), rNum.nextInt(HEIGHT), Diff.GreenEnemy, renderer));
+				if (eType == 3) renderer.addSprite(new YellowEnemy(rNum.nextInt(WIDTH), rNum.nextInt(HEIGHT), Diff.YellowEnemy, renderer));
+				if (eType == 4) renderer.addSprite(new PurpleEnemy(rNum.nextInt(WIDTH), rNum.nextInt(HEIGHT), Diff.PurpleEnemy, renderer));
 			}
 		}
 		stop();
